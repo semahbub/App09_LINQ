@@ -1,0 +1,27 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Example3";
+}
+
+<h1 class="alert alert-info">Example3</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Example3" asp-controller="LINQ" class="form-inline" method="post">
+            <label>Search : </label>
+            <input type="text" name="utext" class="form-control" value="" />
+            <input type="submit" class="btn btn-success" value="Search" />
+        </form>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        <h2 class="text-primary">@item</h2>
+    }
+}
+<br />
+
+<a asp-action="Index" asp-controller="Home">Back</a>

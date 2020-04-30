@@ -1,0 +1,11 @@
+﻿@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="alert alert-info">Index of Training</h1>
+
+@foreach (var item in Model)
+{
+    <h2 class="alert alert-success">@item</h2>
+}
